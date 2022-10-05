@@ -20,7 +20,8 @@ class ContaBancaria {
     }
 
     public int saque(int valor) {
-        this.saldo -= saldo;
+        if (this.saldo - valor < 0)
+            this.saldo -= valor;
 
         return this.saldo;
     }
